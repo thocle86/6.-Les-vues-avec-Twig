@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    <title>Recettes</title>
+{% endblock %}
+
+{% block content %}
+<section class="container">
+    <h2>Mes repas préférés</h2>
+    <div class="row row-cols-3">
+        {% for product in products %}
+        <div class="col card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">{{ product.name }}</h3>
+                <p class="card-text">{{ product.description|e }}</p>
+                <a href="#" class="btn btn-dark">Go somewhere</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
